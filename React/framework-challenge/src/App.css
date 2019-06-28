@@ -1,0 +1,45 @@
+@import url("Header.css");
+@import url("ListLeftPerfil.css");
+@import url("LeftPerfil.css");
+
+.left{
+  display: flex;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+	padding: 0;
+}
+
+h5{
+  font-size: 16px;
+  margin: 15px 0px 0px 20px;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  color: #ffffff;
+}
+
+.main{
+  margin-top: 100px;
+  height: 100%;
+}
+
+.baixo{
+  border-top-color: #ced0d1;
+  border-top-style: solid;
+  bottom: 1px;
+  color: #282C30;
+  font-size: 12px;
+  display: inline-flex;
+  height: 40px;;
+  background-color: #eeeeee;
+  width: 100%;
+}
+
+#footerLetter {
+  display: flex;
+  color: #282C30;
+}
