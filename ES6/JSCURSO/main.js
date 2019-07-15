@@ -6,7 +6,8 @@ class List{
     }
     add(data){
         this.data.push(data);
-        console.log(this.data);
+        console.log(data);
+        
     }
 }
 
@@ -14,17 +15,22 @@ class TodoLista extends List {
     constructor(){
         super(); //chamar constructor pai
         this.usuario = 'Mauricio';
+        
     }
     mostraUsuario(){
-        console.log(this.usuario);
+        console.log("user01:",this.usuario);
     }
 }
+
 const MinhaLista = new TodoLista();
+let i=0;
 document.getElementById('novotodo').onclick = function(){
-    MinhaLista.add('Novo Todo');
+        i++;
+        MinhaLista.add(i);
 }
 
 MinhaLista.mostraUsuario();
+
 //Exemplo estático:
 class Matematica{
     //statico, não depende dos outros!
@@ -33,7 +39,7 @@ class Matematica{
         
     }
 }
-console.log(Matematica.soma(88, 112));
+console.log("soma88+112:",Matematica.soma(88, 112));
 
 //Exemplo de mutação dentro da const
 
@@ -51,33 +57,38 @@ teste(10);
 
 //Exemplo- vetores
 
-const arr = [1, 3, 4, 5, 8, 9];
-const newArr = arr.map(function(item){
+const arr1 = [1, 3, 4, 5, 8, 9];
+const newArr2 = arr1.map(function(item){
     return item*2;
 });
-console.log(newArr);
-const sum = arr.reduce(function(total, next){
+for(let j=0; arr1[j]; j++){
+    arr1[j]=arr1[j]*2;
+    
+}
+console.log("vector x 2",arr1);
+console.log(newArr2);
+const sum = arr1.reduce(function(total, next){
     return total + next;
 });
 console.log(sum);
 
-const filter = arr.filter(function(item){
+const filter = arr1.filter(function(item){
     return item %2===0;
 
 });
 console.log(filter);
 
-const find = arr.find(function(item){
+const find = arr1.find(function(item){
     return item === 4;
 });
 console.log(find);
 
 //arrow functions
-const arr= [1,3,4,5,6];
-const newArr = arr.map((item)=>
+const vet= [1,3,4,5,6];
+const newvet = vet.map((item)=>
      item *2 //antigo return
 );
-console.log(newArr); //imprime valores vetor x 2
+console.log(newvet); //imprime valores vetor x 2
 //;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 // const teste = () => ({nome: 'Mauricio'});
 // console.log(teste()); imprime (nome: Mauricio)
@@ -114,17 +125,17 @@ function mostraNome ({nome , idade}){
 mostraNome(usuario);
 
 // operadores rest/spread
-const usuario = {
-    nome: 'Mauricio',
+const pessoa = {
+    name: 'Mauricio',
     idade: 26,
     empresa:'Masperiano'
 };
-const{nome, ... resto}= usuario; //resto guarda os outros dados
-console.log(nome);
+const{name, ... resto}= pessoa; //resto guarda os outros dados
+console.log(name);
 console.log(resto);
 
-const arr = [1,2,3,4];
-const [a,b,...c] = arr;
+const array0 = [1,2,3,4];
+const [a,b,...c] = array0;
 console.log('a=',a);
 console.log('b=',b);
 console.log('c=',c);
@@ -147,10 +158,10 @@ console.log(somaNew2(1,3,4,5,5,5,5,5));
 
 //Exemplo Concatenando vetores com spread:
 
-const arr1 = [1, 2, 3];
-const arr2 = [4, 5, 6];
-const arr3 = [...arr1, ...arr2];
-console.log(arr3);
+const array1 = [1, 2, 3];
+const array2 = [4, 5, 6];
+const array3 = [...array1, ...array2];
+console.log(array3);
 
 const user1 = {
     nome: 'Mauricio Soto',
@@ -161,21 +172,41 @@ const user2 = {...user1, nome:'Lionel'};
 console.log(user2);
 
 //aula9 - template literals
-const nome= "Mauricio";
-const idade= 26;
-console.log('meu nome é ' +nome+ ' e tenho ' +idade+ ' anos');
-console.log(`Meu nome é ${nome} e tenho ${idade} anos`);
+const nomeUser= "Mauricio";
+const idadeUser= 26;
+console.log('meu nome é ' +nomeUser+ ' e tenho ' +idadeUser+ ' anos');
+console.log(`Meu nome é ${nomeUser} e tenho ${idadeUser} anos`);
 
 //aula10 = object short syntax
-const nome = 'Mauricio';
-const idade = 26;
+const nomeX = 'Mauricio';
+const idadeX = 26;
 const userX = {
-    nome,
-    idade,
+    nomeX,
+    idadeX,
     empresa: 'ultron',
 };
 console.log(userX);
 
 //aula 11 configure webpack, instalei as dependencias já via linha de comando.
-import {soma}from './funcoes';
-console.log(soma(1, 2));
+import {somaExt} from './funcoes.js';
+import {multiExt} from './funcoes.js';
+import {divExt} from './funcoes.js';
+
+
+var operation = ["soma", "multi", "div", "lixo", "derivada"];
+operation.forEach(myFunction);
+
+function myFunction(item) {
+    if(item==="soma"){
+        console.log(somaExt(10, 20));
+    } else if (item==="multi"){
+        console.log(multiExt(10, 20));
+    } else if (item=== "div"){
+        console.log(divExt(20, 10));
+    }else{
+        
+        Error.prototype.message = `${item} "valor invalido"`;
+        console.log(Error.prototype.message);
+    }
+  
+}
