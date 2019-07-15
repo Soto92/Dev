@@ -187,26 +187,35 @@ const userX = {
 };
 console.log(userX);
 
-//aula 11 configure webpack, instalei as dependencias já via linha de comando.
+// //aula 11 configure webpack, instalei as dependencias já via linha de comando.
+
 import {somaExt} from './funcoes.js';
 import {multiExt} from './funcoes.js';
 import {divExt} from './funcoes.js';
 
-
+var form = document.getElementById('inputs');
+var n1 = document.getElementById('num1');
+var n2 = document.getElementById('num2');
 var operation = ["soma", "multi", "div", "lixo", "derivada"];
-operation.forEach(myFunction);
+var number1, number2;
+
+form.addEventListener('submit', function(e) {
+   number1 = n1.value;
+   number2 = n2.value;
+    operation.forEach(myFunction);//chama a função das operações do array apos click
+    // impede o envio do form
+    e.preventDefault();
+});
 
 function myFunction(item) {
     if(item==="soma"){
-        console.log(somaExt(10, 20));
+        console.log(somaExt(number1, number2));
     } else if (item==="multi"){
-        console.log(multiExt(10, 20));
+        console.log(multiExt(number1, number2));
     } else if (item=== "div"){
-        console.log(divExt(20, 10));
+        console.log(divExt(number1, number2));
     }else{
-        
-        Error.prototype.message = `${item} "valor invalido"`;
+        Error.prototype.message = `${item} "valor de operacao invalido"`;
         console.log(Error.prototype.message);
     }
-  
 }
