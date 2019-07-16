@@ -14,3 +14,6 @@ instalar dependencias: (yarn add ou npm install)
   -preset-env serve para fazer os navegadores entenderem o es6;
   criar index.html, main.js,
 criar script dev no pack.json;
+
+dentro do src ficam os arquivos que o webpack precisa
+monitorar. No public os que ñ precisa.

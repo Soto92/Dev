@@ -4,8 +4,8 @@
   "description": "chapter ES6",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode=development -w"
-  
+    "dev": "webpack-dev-server --mode=development",
+    "build": "webpack --mode=production"
   },
   "author": "Mauricio Soto",
   "license": "BSD",
@@ -16,6 +16,7 @@
     "@babel/preset-env": "^7.5.4",
     "babel-loader": "^8.0.6",
     "webpack": "^4.35.3",
-    "webpack-cli": "^3.3.6"
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
   }
 }
