@@ -1,0 +1,76 @@
+html {
+    left: 77px;
+    right: 24px;
+    background-color: #ffffff;
+    font-family: Dosis;
+    font-size: 25px;
+}
+
+@font-face {
+    font-family: Dosis;
+    src: url("../fonts/Dosis-Regular.ttf");
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container {
+    border-color: #d8d8d8;
+    border-style: solid;
+    border-width: 1px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    width: 300px;
+    height: 500px;
+    background-color: #5f6266;
+    border-radius: 10px;
+}
+
+.mensagem {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 250px;
+}
+
+#caixa {
+    padding: 10px;
+    margin-top: 20px;
+    width: 220px;
+    height: 200px;
+    background-color: #f3c27a;
+    word-break: break-word;
+}
+
+ul {
+
+    list-style-type: none;
+}
+
+.teclado {
+    margin-left: -14px;
+    margin-top: 10px;
+    width: 280px;
+    height: 200px;
+}
+
+li:last-child {
+    margin-left: 85px;
+}
+
+.btn {
+    color: #ffffff;
+    background-image: url("../imagens/background-button.png");
+    width: 80px;
+    height: 50px;
+    border-radius: 20%;
+    font-family: Dosis;
+}
+
+.btn:hover {
+    color: #f07128;
+}
