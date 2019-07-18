@@ -118,7 +118,6 @@ let res = document.getElementById('res');
 
 btn5.addEventListener('click', somar);
 
-
 function somar (){
      res.value = parseFloat(num1.value) + parseFloat(num2.value);
 }

@@ -30,11 +30,12 @@ input{
     display: flex;
     padding: 1px;
     flex-direction: column;
+    justify-content: initial;
     align-items: center;
-    justify-content: top;
     width: auto;
-    border: rgb(207, 227, 233) solid 1px;
-    margin: 1px;
+    border: rgb(210, 214, 216) solid 2px;
+    border-radius: 9px;
+    margin: 3px;
 }
 
 #imgLampada {
@@ -43,6 +44,31 @@ input{
 }
 #imgLampada2 {
     width: 100px;
+    cursor: pointer;
+}
+
+#verde  {
+    background: #0e7904;
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+#vermelho {
+    background: #ce1111;
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+#branco {
+    background: #dbdbdb;
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
     cursor: pointer;
 }
 
