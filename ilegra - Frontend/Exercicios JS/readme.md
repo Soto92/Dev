@@ -3,7 +3,7 @@
 
 créditos:
 
-- [Gabriel Darezzo - Exercícios](https://github.com/gabrieldarezzo/helpjs-ravi)
+- [Gabriel Darezzo - helpJS](https://github.com/gabrieldarezzo/helpjs-ravi)
 
 
 

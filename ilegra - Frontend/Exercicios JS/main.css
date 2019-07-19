@@ -1,9 +1,10 @@
-html, body, h1{
+html, body, h1, h5{
     margin: 0;
     padding: 0;
 }
 input{
     text-align: center;
+    margin: 10px 0px 10px;
 }
 
 .obs{
@@ -25,6 +26,20 @@ input{
     display: flex;
     flex-wrap: wrap;
 }
+#tab1{
+    display: flex;
+    max-height: 300px;
+}
+.exerTab{
+    display: flex;
+    display: flex;
+    padding: 1px;
+    flex-direction: column;
+    height: 600px;
+    border: rgb(210, 214, 216) solid 2px;
+    border-radius: 9px;
+    margin: 3px;
+}
 
 .exer{
     display: flex;
@@ -33,6 +48,8 @@ input{
     justify-content: initial;
     align-items: center;
     width: auto;
+    min-height: 200px;
+    min-width: 200px;
     border: rgb(210, 214, 216) solid 2px;
     border-radius: 9px;
     margin: 3px;
@@ -70,6 +87,11 @@ input{
     width: 40px;
     border-radius: 100%;
     cursor: pointer;
+}
+#aki,#aki2 {
+    color: #282d72;
+    font-size: 12px;
+    font-style: italic;
 }
 
 @media screen and (max-width: 800px){

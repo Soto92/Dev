@@ -110,17 +110,25 @@ function erasePoint () {
         cpfcru.innerText = saida;
     } 
 }
-//exercicio 10
+//exercicio 10, 16 e 17
 let num1 = document.getElementById('num1');
 let num2 = document.getElementById('num2');
 let btn5 = document.getElementById('somar');
 let res = document.getElementById('res');
 
-btn5.addEventListener('click', somar);
+// btn5.addEventListener('click', somar);
+num2.addEventListener('keyup', somar);
 
 function somar (){
-     res.value = parseFloat(num1.value) + parseFloat(num2.value);
+    if(num1.value && num2.value){
+        res.value = parseFloat(num1.value) + parseFloat(num2.value);
+    } else {
+        res.value = 0;
+    }
 }
+
+
+
 
 
 
