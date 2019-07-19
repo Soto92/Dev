@@ -116,8 +116,7 @@ let num2 = document.getElementById('num2');
 let btn5 = document.getElementById('somar');
 let res = document.getElementById('res');
 
-// btn5.addEventListener('click', somar);
-num2.addEventListener('keyup', somar);
+btn5.addEventListener('click', somar);
 
 function somar (){
     if(num1.value && num2.value){
