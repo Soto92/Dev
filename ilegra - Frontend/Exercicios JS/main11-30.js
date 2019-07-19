@@ -144,7 +144,6 @@ for(i=1; i<=10; i++){
 }
 //exercicio 30
 let tab1 = document.getElementById ('tab1');
-let tab2 = document.getElementById ('tab2');
 
 for(i=1; i<=10; i++){
     tab1.innerHTML += `<br>`;
