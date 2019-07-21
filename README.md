@@ -1,4 +1,10 @@
 # Dev
 
-Alguns Códigos e trechos dos mesmos em diversas linguagens de programação. 
-Edit1: em formação!
+Alguns projetos em Frontend.
+Tecnologias:
+
+- Html;
+- CSS;
+- Javascript;
+- ES6;
+- React JS;
