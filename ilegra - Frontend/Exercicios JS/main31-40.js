@@ -156,16 +156,17 @@ const status02 = 'img/02.png';
 const status03 = 'img/03.png';
 
 setInterval(() => {
+    
     let statusAtual = document.getElementById('imgUrso');
     let valorSrc = statusAtual.getAttribute('src');
 
     if (valorSrc === status01) {
         statusAtual.setAttribute('src', status02);
     }
-    if (valorSrc === status02) {
+    else if (valorSrc === status02) {
         statusAtual.setAttribute('src', status03);
     }
-    if (valorSrc === status03) {
+    else if (valorSrc === status03) {
         statusAtual.setAttribute('src', status01);
     }
 }, 200);
