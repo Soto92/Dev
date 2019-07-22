@@ -1,0 +1,31 @@
+body{
+    background: rgb(204, 204, 204);
+}
+button {
+    font-size: 20px;
+    color: white;
+    padding: 15px 30px;
+    border: 0;
+    background-color: rgb(211, 82, 31);
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+#list{
+    background: rgb(255, 255, 255);
+    padding: 10px;
+    list-style: none;
+}
+
+  .stiloL {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid rgb(240, 121, 9);
+    padding: 10px;
+  }
+  
+  .stiloL img {
+    width: 40px;
+    margin-right: 20px;
+  }

@@ -6,6 +6,7 @@ Conhecimentos adquiridos e trabalhados:
 - CSS;
 - Responsividade;
 - Javascript;
+- Requests;
 - Sass;
 - Webpack;
 - es6;
