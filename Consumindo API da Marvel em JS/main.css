@@ -84,7 +84,6 @@ body {
     text-align: center;
 }
 
-
 button {
     outline: 0;
     margin: 10px;
@@ -119,7 +118,7 @@ ul {
     cursor: pointer;
 }
 
-@media screen and (max-width: 665px) {
+@media screen and (max-width: 770px) {
     html, body{
         overflow-x: hidden; 
     }
@@ -134,9 +133,22 @@ ul {
         justify-content: center;
        margin: 6px;
     }
-    #searchIput{
+    .search {
+        color: rgb(167, 167, 167);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        width: 200px;
+        height: 50px;
+       cursor: pointer;
+    }
+    #searchInput{
+        outline: 0;
+        width: 150px;
+        font-size: 12px;
         border: none;
-        background: transparent;
+        background-color: transparent;
         border-radius: 30px;
         text-align: center;
     }
