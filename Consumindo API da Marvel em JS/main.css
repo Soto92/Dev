@@ -1,11 +1,61 @@
+@font-face {
+    font-family: Marvel;
+    src: url('./fonts/Marvel-Regular.ttf');
+    font-weight: bold;
+} 
+
 html, body{
     margin: 0;
     padding:0;
 }
+h5{
+    margin: 0;
+}
+.subTitle {
+    width: 100vw;
+    height: 20px;
+    background: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header{
+    font-family: Marvel;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+    background: rgb(219, 14, 14);
+    height: 100px;
+}
+
+body {
+	height: 90vh;
+	color: #fff;
+	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 800% 800%;
+	animation: Gradient 15s ease infinite;
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
 
 #main {
     margin: auto;
-    width: 60%;
+    width: 70%;
 }
 
 button {
@@ -14,21 +64,27 @@ button {
     color: white;
     padding: 15px 20px;
     border: 0;
-    background-color: rgb(206, 18, 18);
+    background-color: rgb(10, 68, 175);
     cursor: pointer;
     border-radius: 30px;
 }
 
 ul {
-    background: rgb(85, 84, 84);
+    
     padding: 10px;
     list-style: none;
 }
 
 .stiloL {
-    width: 96%;
+    width: 70%;
     display: flex;
     align-items: center;
-    border-bottom: 2px solid rgb(124, 124, 123);
+    border-bottom: 1px solid rgb(124, 124, 123);
     padding: 10px;
-  }
+}
+
+.stiloL:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    border-bottom: none;
+    cursor: pointer;
+}
