@@ -2,11 +2,11 @@ const  btn = document.querySelector('#exibaBtn');
 let list = document.querySelector('#list');
 
 let date = new Date();
-let ts = '1563828791285'; //getTime XD82
-console.log(ts);
+let ts = Date.now(); //getTime XD82
 const publicKey = 'c2c80a3a6c10fa95806ee502681d6d4';
 const privateKey = '24438e70865a9787d82aee470efab0514dd0cdb';
-const hash = 'cbd438f22c17feb7ff67ba8748605062';
+const hash = MD5(ts + privateKey + publicKey);
+
 let listCount = 0;
 btn.addEventListener('click', function(){
     const URL = `https://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${publicKey}&hash=${hash}`;
@@ -31,7 +31,12 @@ function mostreDesc(hero, item) {
     const photo = `${hero.thumbnail.path}/landscape_medium.${hero.thumbnail.extension}`;
     let desc = `${ hero.description }`;
     if(desc == ""){
-       desc = "Sem descrição";
+       desc = "Description not available";
     }
     item.innerHTML = '<img src="'+ photo +'"/> <span>'+ desc +'</span> ';
+}
+const searchInput = document.getElementById('search');
+
+function searchHero () {
+
 }
