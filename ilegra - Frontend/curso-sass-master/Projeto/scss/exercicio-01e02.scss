@@ -1,9 +1,14 @@
+$b-box : border-box;
+$b-color: #3897f0;
+$size-width : 100%;
+
+
 * {
     margin: 0;
     padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+    -webkit-box-sizing: $b-box;
+    -moz-box-sizing: $b-box;
+    box-sizing: $b-box;
 }
   
 html {
@@ -69,13 +74,13 @@ header {
     padding: 6px 14px;
     border-width: 1px;
     border-style: solid;
-    border-color: #3897f0;
-    color: #3897f0;
+    border-color: $b-color;
+    color: $b-color;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
     &:hover{
-        background: #3897f0;
+        background: $b-color;
         color: #fff;
     }
 }
@@ -85,19 +90,18 @@ header {
     justify-content: space-between;
     display: flex;
     li {
-        width: 100%;
+        width: $size-width;
         margin: 20px 0;
         position: relative;
         img {
-            width: 100%;
-            
+            width: $size-width;
         }
         .img-hover {
             opacity: 0;
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
+            width: $size-width;
             height: 100%;
             background: rgba(0, 0, 0, 0.3);
             transition: all 0.3s linear;
@@ -105,13 +109,10 @@ header {
         &:hover .img-hover {
             opacity: 1;
         }
-       
     }
-   
 }
 
 @media (min-width: 768px ) {
-
     header {
       flex-flow: row;
       .avatar {
@@ -121,9 +122,7 @@ header {
         text-align: left;
       }
     }
-
     .photos li {
           width: 30%;
     }
-
 }

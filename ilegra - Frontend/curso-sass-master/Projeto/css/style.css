@@ -16,3 +16,23 @@ a {
   color: #ffa; }
   a hover {
     color: #faf; }
+
+nav {
+  background: #254153;
+  color: #fff;
+  width: 100%;
+  font-size: 1.2rem; }
+
+aside {
+  width: 300px; }
+
+section {
+  font-family: "Lucida Grande";
+  font-weight: bold; }
+
+body {
+  background: red;
+  color: #fff; }
+
+section {
+  background: #535386; }

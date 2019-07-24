@@ -1,3 +1,4 @@
+//seletores
 nav {
     width: 100%;
     background: #000;
@@ -25,5 +26,57 @@ a {
         color: #faf;
     }
 }
+//variaveis
+$width: 100%;
+$font-size: 1.2rem;
+$background: #254153;
+$color: #fff;
+$border-style: solid 1px $color;
+nav {
+    background: $background;
+    color: $color;
+    width: $width;
+    font-size: $font-size;
+}
+
+$width-rem: 3.5rem;
+$width-px: 300px;
+aside{
+    width: $width-px;
+}
+
+$font: "Lucida Grande";
+$weight: bold;
+section{
+    font: {
+        family: $font;
+        weight: $weight;
+    }
+}
+
+$bg: red;
+$bg-section: rgb(83, 83, 134);
+$font-color: #fff;
+
+body {
+    background: $bg;
+    color: $font-color;
+}
+section{
+    background: $bg-section;
+}
+
+$color-light: false;
+$color-dark: true;
+$color-side: null;
+
+$animals: puma, sea-slug, egret, salamander;
+$animals: puma sea-slug egret salamander;
+$animals: "puma", "sea-slug", "egret", "salamander";
+
+$margin: 10px 15px 12px 16px;
+
+
+
 
 
