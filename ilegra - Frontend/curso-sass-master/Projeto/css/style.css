@@ -1,5 +1,18 @@
-body {
+nav {
+  width: 100%;
   background: #000; }
+  nav ul {
+    list-style: none;
+    padding: 20px 0; }
+  nav li {
+    color: red;
+    margin: 0 20px;
+    font-family: "Times New Roman", Times, Serif;
+    font-style: italic;
+    font-size: 30px;
+    font-weight: bold; }
 
 a {
-  color: red; }
+  color: #ffa; }
+  a hover {
+    color: #faf; }
