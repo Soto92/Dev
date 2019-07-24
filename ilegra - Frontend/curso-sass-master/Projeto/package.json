@@ -1,0 +1,24 @@
+{
+  "name": "projeto",
+  "version": "1.0.0",
+  "description": "Curso - sass - Amanda Vilela",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o css/ --recursive"
+   
+  },
+  "keywords": [
+    "Curso",
+    "sass",
+    "Amanda",
+    "Vilele",
+    "Mauricio",
+    "Soto",
+    "CSS"
+  ],
+  "author": "Mauricio Soto",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
