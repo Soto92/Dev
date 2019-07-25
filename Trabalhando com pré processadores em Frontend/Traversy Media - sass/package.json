@@ -1,7 +1,7 @@
 {
   "name": "Preprocessador",
   "version": "1.0.0",
-  "description": "Reponsive",
+  "description": "Traversy Media - Responsive Portfolio",
   "main": "index.js",
   "dependencies": {
     "node-sass": "^4.12.0"
