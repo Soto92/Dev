@@ -16,9 +16,6 @@ class CenterTb extends React.Component {
      })
   }
 
-getUser(){
-  
-}
 
 deleteUser (e, id){
 
