@@ -1,0 +1,41 @@
+.accordion {
+    max-width: 600px;
+    margin: 4rem auto;
+    width: 90%;
+    font-family: "Raleway", sans-serif;
+    background: #f4f4f4;
+  }
+
+  .accordion__title {
+    margin: 0;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 1rem 1.5rem;
+    background: #ffffff;
+    color: rgb(235, 100, 11);
+    cursor: pointer;
+    transition: .3s ease;
+  }
+  .accordion__title:hover {
+    background: #ee6306;
+    color:#ffffff;
+  }
+  .accordion__copy {
+    display: none;
+    padding: 1rem 1.5rem 2rem 1.5rem;
+    color: rgb(134, 134, 125);
+    line-height: 1.6;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .accordion__copy--open {
+    max-height: 200px;
+    overflow-y: auto;
+    display: block;
+  }
+  
+  body {
+    background: #222;
+  }
+  
