@@ -1,42 +1,79 @@
-const  btn = document.querySelector('#exibaBtn');
+const btn = document.querySelector('#exibaBtn');
+const btnHome = document.getElementById('home');
 let list = document.querySelector('#list');
-
 let date = new Date();
 let ts = Date.now(); //getTime XD82
-const publicKey = '8c2c80a3a6c10fa95806ee502681d6d4';
-const privateKey = '224438e70865a9787d82aee470efab0514dd0cdb';
+const publicKey = 'c2c80a3a6c10fa95806ee502681d6d4';
+const privateKey = '24438e70865a9787d82aee470efab0514dd0cdb';
 const hash = MD5(ts + privateKey + publicKey);
-
+let item;
 let listCount = 0;
-btn.addEventListener('click', function(){
+
+btnHome.addEventListener('click', () => home());
+
+function home() {
+    console.log(list.childNodes);
+    if (list.hasChildNodes()) {
+        while (list.childNodes[0]) {
+            list.removeChild(list.childNodes[0]);
+        }
+    }
+}
+
+btn.addEventListener('click', function () {
+    home();
     const URL = `https://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${publicKey}&hash=${hash}`;
     fetch(URL).
     then(function (response) {
-    return response.json();
+        return response.json();
     }).
     then(function (response) {
-     console.log(response);
-     response.data.results.forEach( function(hero){
-         let item = document.createElement('li');
-         item.classList.add('stiloL');
-         const photo = `${hero.thumbnail.path}/landscape_medium.${hero.thumbnail.extension}`;
-         item.innerHTML = '<img src="'+ photo +'"/> <span>'+ hero.name +'</span> ';
-         list.appendChild(item);
-         item.addEventListener('click',() => mostreDesc(hero, item));
+        console.log(response);
+        response.data.results.forEach(function (hero) {
+
+            item = document.createElement('li');
+            item.classList.add('stiloL');
+            const photo = `${hero.thumbnail.path}/landscape_medium.${hero.thumbnail.extension}`;
+            item.innerHTML = '<img src="' + photo + '"/> <span>' + hero.name + '</span> ';
+
+            list.appendChild(item);
+            item.addEventListener('click', () => mostreDesc(hero, item));
         })
     });
 })
 
+const searchInput = document.getElementById('searchInput');
+const btnSearch = document.getElementById('btnSearch');
+btnSearch.addEventListener('click', searchHero);
+
+function searchHero() {
+    home();
+    const name_hero = encodeURIComponent(searchInput.value);
+    const URL = `https://gateway.marvel.com/v1/public/characters?name=${name_hero}&ts=${ts}&apikey=${publicKey}&hash=${hash}`;
+
+    fetch(URL).
+    then(function (response) {
+        return response.json();
+    }).
+    then(function (response) {
+        console.log(response);
+        response.data.results.forEach(function (hero) {
+
+            item = document.createElement('li');
+            item.classList.add('stiloL');
+            const photo = `${hero.thumbnail.path}/landscape_medium.${hero.thumbnail.extension}`;
+            item.innerHTML = '<img src="' + photo + '"/> <span>' + hero.name + '</span> ';
+            list.append(item);
+            item.addEventListener('click', () => mostreDesc(hero, item));
+        })
+    });
+}
+
 function mostreDesc(hero, item) {
     const photo = `${hero.thumbnail.path}/landscape_medium.${hero.thumbnail.extension}`;
     let desc = `${ hero.description }`;
-    if(desc == ""){
-       desc = "Description not available";
+    if (desc == "") {
+        desc = "Description not available";
     }
-    item.innerHTML = '<img src="'+ photo +'"/> <span>'+ desc +'</span> ';
-}
-const searchInput = document.getElementById('search');
-
-function searchHero () {
-
+    item.innerHTML = '<img src="' + photo + '"/> <span>' + desc + '</span> ';
 }
