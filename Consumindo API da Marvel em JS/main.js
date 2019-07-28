@@ -6,8 +6,7 @@ let ts = Date.now(); //getTime XD82
 const publicKey = 'c2c80a3a6c10fa95806ee502681d6d4';
 const privateKey = '24438e70865a9787d82aee470efab0514dd0cdb';
 const hash = MD5(ts + privateKey + publicKey);
-let item;
-let listCount = 0;
+
 
 btnHome.addEventListener('click', () => home());
 
@@ -18,6 +17,16 @@ function home() {
             list.removeChild(list.childNodes[0]);
         }
     }
+}
+
+function mostreDesc(hero, itemList) {
+    const photo = `${hero.thumbnail.path}/landscape_medium.${hero.thumbnail.extension}`;
+    let desc = `${hero.description}`;
+    console.log(hero);
+    if (desc == "") {
+        desc = "Description not available";
+    }
+    itemList.innerHTML = '<img src="' + photo + '"/> <span>' + desc + '</span> ';
 }
 
 btn.addEventListener('click', function () {
@@ -31,7 +40,7 @@ btn.addEventListener('click', function () {
         console.log(response);
         response.data.results.forEach(function (hero) {
 
-            item = document.createElement('li');
+            let item = document.createElement('li');
             item.classList.add('stiloL');
             const photo = `${hero.thumbnail.path}/landscape_medium.${hero.thumbnail.extension}`;
             item.innerHTML = '<img src="' + photo + '"/> <span>' + hero.name + '</span> ';
@@ -59,7 +68,7 @@ function searchHero() {
         console.log(response);
         response.data.results.forEach(function (hero) {
 
-            item = document.createElement('li');
+            let item = document.createElement('li');
             item.classList.add('stiloL');
             const photo = `${hero.thumbnail.path}/landscape_medium.${hero.thumbnail.extension}`;
             item.innerHTML = '<img src="' + photo + '"/> <span>' + hero.name + '</span> ';
@@ -67,13 +76,4 @@ function searchHero() {
             item.addEventListener('click', () => mostreDesc(hero, item));
         })
     });
-}
-
-function mostreDesc(hero, item) {
-    const photo = `${hero.thumbnail.path}/landscape_medium.${hero.thumbnail.extension}`;
-    let desc = `${ hero.description }`;
-    if (desc == "") {
-        desc = "Description not available";
-    }
-    item.innerHTML = '<img src="' + photo + '"/> <span>' + desc + '</span> ';
 }

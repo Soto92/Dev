@@ -2,15 +2,19 @@
     font-family: Marvel;
     src: url('./fonts/Marvel-Regular.ttf');
     font-weight: bold;
-} 
+}
 
-html, body{
+html,
+body {
+    height: 100%;
     margin: 0;
-    padding:0;
+    padding: 0;
 }
-h5{
+
+h5 {
     margin: 0;
 }
+
 .subTitle {
     width: 100vw;
     height: 20px;
@@ -21,7 +25,7 @@ h5{
     justify-content: center;
 }
 
-header{
+header {
     font-family: Marvel;
     font-size: 40px;
     display: flex;
@@ -34,36 +38,40 @@ header{
 }
 
 body {
-	height: 90vh;
-	color: #fff;
-	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
-	background-size: 800% 800%;
-	animation: Gradient 15s ease infinite;
+    height: 90vh;
+    color: #fff;
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 800% 800%;
+    animation: Gradient 15s ease infinite;
 }
 
 @keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
 }
 
 #main {
     margin: auto;
     width: 70%;
 }
-.panel{
+
+.panel {
     display: flex;
     flex-direction: row;
     align-items: baseline;
     justify-content: center;
-    margin:20px;
+    margin: 20px;
 }
+
 .search {
     color: rgb(167, 167, 167);
     display: flex;
@@ -75,7 +83,8 @@ body {
     background: #ffffff;
     cursor: pointer;
 }
-#searchInput{
+
+#searchInput {
     outline: 0;
     font-size: 20px;
     border: none;
@@ -108,63 +117,74 @@ ul {
     border-bottom: 1px solid rgb(124, 124, 123);
     padding: 10px;
 }
-.stiloL, img{
+
+.stiloL,
+img {
     margin-right: 6px;
 }
 
 .stiloL:hover {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     border-bottom: none;
     cursor: pointer;
 }
 
 @media screen and (max-width: 770px) {
-    html, body{
-        overflow-x: hidden; 
+
+    html,
+    body {
+        overflow-x: hidden;
     }
+
     #main {
         margin: auto;
         width: 90%;
     }
-    .panel{
+
+    .panel {
         display: flex;
-        flex-direction: row;
-        align-items: baseline;
-        justify-content: center;
-       margin: 6px;
+        flex-direction: column;
+        align-items: center;
+        margin: 2px;
     }
+
     .search {
         color: rgb(167, 167, 167);
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 30px;
-        width: 200px;
+        width: 100%;
         height: 50px;
-       cursor: pointer;
+        cursor: pointer;
+        margin: 4px;
     }
-    #searchInput{
+
+    #searchInput {
         outline: 0;
-        width: 150px;
+        width: 80%;
         font-size: 12px;
         border: none;
         background-color: transparent;
         border-radius: 30px;
         text-align: center;
     }
-     img{
-        
-        width: 80px;
+
+    img {
+
+        width: 150px;
     }
 
     button {
         font-size: 15px;
         height: 50px;
+        width: 100%;
         color: white;
         border: 0;
         background-color: rgb(10, 68, 175);
         cursor: pointer;
         border-radius: 30px;
-        padding: 5px;
+        padding: 3px;
+        margin: 4px;
     }
 }
