@@ -3,8 +3,8 @@ const btnHome = document.getElementById('home');
 let list = document.querySelector('#list');
 let date = new Date();
 let ts = Date.now(); //getTime XD82
-const publicKey = '8c2c80a3a6c10fa95806ee502681d6d4';
-const privateKey = '224438e70865a9787d82aee470efab0514dd0cdb';
+const publicKey = 'c2c80a3a6c10fa95806ee502681d6d4';
+const privateKey = '24438e70865a9787d82aee470efab0514dd0cdb';
 const hash = MD5(ts + privateKey + publicKey);
 
 btnHome.addEventListener('click', home);
