@@ -134,6 +134,7 @@ img {
     html,
     body {
         overflow-x: hidden;
+        height: 100%;
     }
 
     #main {
@@ -171,8 +172,7 @@ img {
     }
 
     img {
-
-        width: 150px;
+        width: 200px;
     }
 
     button {
