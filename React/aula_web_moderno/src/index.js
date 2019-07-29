@@ -1,7 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import BomDia from './componentes/Bom-Dia'
+// import { BomDia as Dia, BoaNoite } from './componentes/Multiplos'
+// import X from './componentes/Multiplos';
 
-ReactDOM.render(<BomDia nome="Mauricio" />, document.getElementById('root'));
+// ReactDOM.render(
+//     <div>
+//         <Dia nome="Mauricio" />
+//         <BoaNoite nome="Maria" />
+//         <X nome="João" />
+//     </div>
+    
+// , document.getElementById('root'));
 
+import Saudacao from './componentes/Saudacao'
+
+ReactDOM.render(
+        <div>
+           < Saudacao tipo="Bom Dia" nome="Mauricio" />
+        </div>
+        
+, document.getElementById('root'));
 
