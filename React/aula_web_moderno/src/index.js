@@ -12,12 +12,22 @@ import ReactDOM from 'react-dom';
     
 // , document.getElementById('root'));
 
-import Saudacao from './componentes/Saudacao'
-
+// import Saudacao from './componentes/Saudacao'
+// ReactDOM.render(
+//         <div>
+//            < Saudacao tipo="Bom Dia" nome="Mauricio" />
+//         </div>
+        
+// , document.getElementById('root'));
+import Pai from './componentes/Pai'
+import Filho from './componentes/Filho';
 ReactDOM.render(
         <div>
-           < Saudacao tipo="Bom Dia" nome="Mauricio" />
+           <Pai nome='Claudio' sobrenome='Soto'>
+               <Filho nome='Mauricio'/>
+               <Filho nome='Sandra'/>
+              
+            </Pai>
         </div>
         
 , document.getElementById('root'));
-
