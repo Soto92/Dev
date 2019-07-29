@@ -21,7 +21,7 @@ function LeftPerfil() {
           </nav>
           <div>
             <div className="barra">
-                <input type="text" id="txtBusca" placeholder="Search.."/>
+                <input type="text" className="txtBusca" placeholder="Search.."/>
                 <div className="icon-search"></div>
                 </div>
           </div>
