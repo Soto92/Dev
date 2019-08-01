@@ -10,7 +10,6 @@ export default class Calculator extends Component {
         this.clearMemory = this.clearMemory.bind(this)
         this.setOperation = this.setOperation.bind(this)
         this.addDigit = this.addDigit.bind(this)
-
     }
 
     clearMemory(){
@@ -28,7 +27,8 @@ export default class Calculator extends Component {
     render(){
     
         return(
-            <div>
+            <div className="container">
+                <h1>Calculator in React</h1>
                 <div className="calculator">
                     <Display value={100}/>
                     <Button label="AC" click={(this.clearMemory)} triple/>
