@@ -1,3 +1,7 @@
+body {
+    overflow: hidden;
+}
+
 .calculator{
     height: 320px;
     width: 235px;
